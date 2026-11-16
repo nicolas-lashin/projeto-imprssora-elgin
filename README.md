@@ -6,6 +6,10 @@ IntelliJ IDEA
 Biblioteca ESC/POS
 Driver/SDK da Elgin i9
 
+autores
+charles victor
+mauricio gomes
+nicolas geraldo
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
