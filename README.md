@@ -11,7 +11,7 @@ O trabalho faz parte da disciplina de **Programação Orientada a Objetos**.
 
 ## 🧰 Tecnologias Utilizadas
 
-- **Java 17**
+- **Java 27**
 - **IntelliJ IDEA**
 - **Biblioteca ESC/POS**
 - **Driver/SDK da Elgin i9**
