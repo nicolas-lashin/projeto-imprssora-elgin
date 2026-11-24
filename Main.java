@@ -150,12 +150,13 @@ public class Main {
         for (int i = 1; i <= copias; i++) {
             int retorno = ImpressoraDLL.INSTANCE.ImpressaoTexto(texto, 1, 4, 0);
             if (retorno >= 0) {
+                ImpressoraDLL.INSTANCE.Corte(5);
                 System.out.println("Cópia " + i + " impressa!");
             } else {
                 System.out.println("Erro ao imprimir. Código: " + retorno);
             }
         }
-        ImpressoraDLL.INSTANCE.Corte(5);
+
     }
 
     public static void imprimircodigodebarras(){
@@ -189,7 +190,7 @@ public class Main {
     }
     public static void imprimirXMLSAT(){
         if (conexaoAberta == true){
-            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLSAT("path=C://Users//nicolas_geraldo//Downloads//Trabalho//.XMLSAT.xml", 0);
+            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLSAT("path=XMLSAT.xml", 0);
             if (retorno == 0){
                 ImpressoraDLL.INSTANCE.Corte(5);
                 System.out.println("cupom impresso com sucesso");
@@ -203,7 +204,7 @@ public class Main {
     }
     public static void imprimirXMLCancelamentoSAT(){
         if (conexaoAberta == true){
-            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLCancelamentoSAT("path=C://Users//nicolas_geraldo//Downloads//Trabalho//.CANC_SET.xml", "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==", 0);
+            int retorno = ImpressoraDLL.INSTANCE.ImprimeXMLCancelamentoSAT("path=CANC_SAT.xml", "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==", 0);
             if (retorno == 0){
                 ImpressoraDLL.INSTANCE.Corte(5);
                 System.out.println("cupom cancelado com sucesso");
@@ -219,7 +220,6 @@ public class Main {
         if (conexaoAberta == true){
             int retorno = ImpressoraDLL.INSTANCE.AbreGavetaElgin(1, 5, 10);
             if (retorno == 0){
-                ImpressoraDLL.INSTANCE.Corte(5);
                 System.out.println("gaveta aberta com sucesso");
             }else{
                 System.out.println("Erro ao abrir gaveta. Retorno " + retorno);
